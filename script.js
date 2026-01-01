@@ -3,12 +3,16 @@ const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-const user = tg.initDataUnsafe && tg.initDataUnsafe.user;
+const user = tg.initDataUnsafe?.user;
 
-const name = user?.first_name || "Friend";
+if (user) {
+  document.getElementById("username").innerText =
+    `Welcome ${user.first_name}`;
+} else {
+  document.getElementById("username").innerText =
+    "Welcome Retro Builder";
+}
 
-document.getElementById("username").innerText =
-  "Welcome " + name;
   function openChat() {
   document.getElementById("screen").innerHTML = `
     <h3>Chat</h3>

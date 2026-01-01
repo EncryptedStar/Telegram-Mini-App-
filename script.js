@@ -3,14 +3,13 @@ const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-const user = tg.initDataUnsafe?.user;
+const user = tg.initDataUnsafe && tg.initDataUnsafe.user;
 
-if (user) {
-  document.getElementById("username").innerText =
-    "Welcome " + user.first_name;
-}
+const name = user?.first_name || "Friend";
 
-function openChat() {
+document.getElementById("username").innerText =
+  "Welcome " + name;
+  function openChat() {
   document.getElementById("screen").innerHTML = `
     <h3>Chat</h3>
     <p>Buddy List</p>

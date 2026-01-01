@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.app {
+  width: 320px;
+  background: #000;
+  border: 2px solid #00ff00;
+  padding: 15px;
+}
+
+.menu button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #00ff00;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#screen {
+  margin-top: 15px;
+  border-top: 1px solid #00ff00;
+  padding-top: 10px;
+}

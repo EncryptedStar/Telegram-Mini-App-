@@ -13,6 +13,15 @@ if (user) {
     "Welcome Retro Builder";
 }
 
+
+document.getElementById("chatBtn")?.addEventListener("click", () => {
+  tg.showAlert("Chat coming soon 🚀");
+});
+
+document.getElementById("cryptoBtn")?.addEventListener("click", () => {
+  tg.showAlert("Crypto dashboard loading...");
+});
+
   function openChat() {
   document.getElementById("screen").innerHTML = `
     <h3>Chat</h3>
@@ -31,3 +40,8 @@ function openCrypto() {
     <p>💎 0.00 TON</p>
   `;
 }
+
+tg.BackButton.show();
+tg.BackButton.onClick(() => {
+  tg.close();
+});

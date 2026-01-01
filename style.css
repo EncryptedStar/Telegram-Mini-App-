@@ -29,3 +29,17 @@ body {
   border-top: 1px solid #00ff00;
   padding-top: 10px;
 }
+
+body {
+  background-color: #0f0f0f;
+  color: #00ff66;
+  font-family: monospace;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #00ff66;
+  border: none;
+  font-weight: bold;
+}
